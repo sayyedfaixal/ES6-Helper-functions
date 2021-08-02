@@ -1,6 +1,6 @@
 //Balanced Paranthesis using Reduce Function
 function balanceParent(string){
-  return string.split("").reduce(function(match, char){
+  return !string.split("").reduce(function(match, char){
         if(match < 0 ) return match;
   			if(char === "(" || char === "{" || char === "[") return ++match;
     		if(char  === ")" || char === "}" || char === "]") return --match;
