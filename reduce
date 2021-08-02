@@ -1,0 +1,10 @@
+//Balanced Paranthesis using Reduce Function
+function balanceParent(string){
+  return string.split("").reduce(function(match, char){
+  			if(char === "(" || char === "{" || char === "[") return ++match;
+    		if(char  === ")" || char === "}" || char === "]") return --match;
+    		return match;
+  }, 0);
+}
+
+balanceParent("()[{]{")
